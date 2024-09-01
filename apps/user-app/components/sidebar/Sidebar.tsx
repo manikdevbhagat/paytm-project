@@ -1,6 +1,6 @@
 import React from "react";
 import SidebarItem from "./SidebarItem";
-import { Home, ArrowLeftRight, Clock } from "lucide-react";
+import { Home, ArrowLeftRight, Clock } from "@repo/ui/components/icons/icons";
 
 const Sidebar = () => {
   return (
