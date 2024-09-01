@@ -5,16 +5,23 @@ import {
   CardHeader,
   CardTitle,
 } from "@repo/ui/components/ui/card";
-import { RecentTransactionsTable } from "./RecentTransactionsTable";
+import {
+  OnRampTransaction,
+  RecentTransactionsTable,
+} from "./RecentTransactionsTable";
 
-const RecentTransactions = () => {
+const RecentTransactions = ({
+  transactions,
+}: {
+  transactions: OnRampTransaction[];
+}) => {
   return (
     <Card className="w-full">
       <CardHeader>
         <CardTitle>Recent Transactions</CardTitle>
       </CardHeader>
       <CardContent>
-        <RecentTransactionsTable />
+        <RecentTransactionsTable transactions={transactions} />
       </CardContent>
     </Card>
   );
