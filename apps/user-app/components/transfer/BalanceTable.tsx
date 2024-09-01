@@ -6,16 +6,26 @@ import {
   CardTitle,
 } from "@repo/ui/components/ui/card";
 
-const BalanceTable = () => {
+const BalanceTable = ({
+  amount,
+  locked,
+}: {
+  amount: number;
+  locked: number;
+}) => {
   return (
     <Card className="w-full">
       <CardHeader>
         <CardTitle>Balance</CardTitle>
       </CardHeader>
       <CardContent>
-        <TableRow title="Unlocked Balance" value={0} />
-        <TableRow title="Locked Balance" value={0} />
-        <TableRow title="Total Balance" value={0} className="font-semibold" />
+        <TableRow title="Unlocked Balance" value={amount / 100} />
+        <TableRow title="Locked Balance" value={locked / 100} />
+        <TableRow
+          title="Total Balance"
+          value={(amount + locked) / 100}
+          className="font-semibold"
+        />
       </CardContent>
     </Card>
   );
