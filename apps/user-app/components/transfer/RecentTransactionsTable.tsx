@@ -23,6 +23,11 @@ type RecentTransactionsTableProps = {
 export function RecentTransactionsTable({
   transactions,
 }: RecentTransactionsTableProps) {
+  if (transactions.length === 0) {
+    return (
+      <p className="mt-4 text-center text-gray-500">No transactions yet</p>
+    );
+  }
   return (
     <Table>
       <TableHeader>
