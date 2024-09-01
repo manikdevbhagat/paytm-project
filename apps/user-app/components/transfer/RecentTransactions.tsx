@@ -5,7 +5,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@repo/ui/components/ui/card";
-import { number } from "zod";
 import { RecentTransactionsTable } from "./RecentTransactionsTable";
 
 const RecentTransactions = () => {
